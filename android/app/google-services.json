@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "840228174511",
+    "project_id": "blueprint-mobile-dart",
+    "storage_bucket": "blueprint-mobile-dart.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840228174511:android:7bb9d094606d84639c725a",
+        "android_client_info": {
+          "package_name": "id.wit.blueprint_mobile_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBTxzHutPSmnPoElAN_qKqggZm7wCIYwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840228174511:android:41741eb85087a7d69c725a",
+        "android_client_info": {
+          "package_name": "id.wit.blueprint_mobile_flutter.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBTxzHutPSmnPoElAN_qKqggZm7wCIYwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
