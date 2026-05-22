@@ -48,3 +48,8 @@ app.*.map.json
 
 # Env
 *.env
+
+# Agents
+.claude
+CLAUDE.md
+AGENTS.md
