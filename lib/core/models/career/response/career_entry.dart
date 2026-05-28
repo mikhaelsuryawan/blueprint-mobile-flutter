@@ -5,5 +5,8 @@ class CareerEntry {
   final String role; // e.g. "Network Engineer"
 
   CareerEntry(
-      {required this.startPeriod, required this.endPeriod, required this.company, required this.role});
+      {required this.startPeriod,
+      required this.endPeriod,
+      required this.company,
+      required this.role});
 }

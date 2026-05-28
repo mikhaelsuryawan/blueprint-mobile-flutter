@@ -10,7 +10,7 @@ import '../shimmers/shimmer_rounded_rectangle.dart';
 // Default widget image viewer
 class ImageExtended extends StatelessWidget {
   const ImageExtended({
-    Key?key,
+    Key? key,
     this.imageUrl = '',
     this.alt = '',
     this.useAlt = false,
@@ -64,7 +64,6 @@ class ImageExtended extends StatelessWidget {
           );
         },
         placeholder: (context, url) {
-
           if (useShimmer) {
             return _placeholder;
           }
@@ -94,7 +93,8 @@ class ImageExtended extends StatelessWidget {
   Widget get _noImageWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(borderRadius),
-      child: Image.asset(Assets.noImage,
+      child: Image.asset(
+        Assets.noImage,
         height: height,
         width: width,
         fit: BoxFit.contain,

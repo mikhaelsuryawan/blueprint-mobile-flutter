@@ -27,8 +27,7 @@ class UpdateProfileBloc extends Bloc<UpdateProfileEvent, UpdateProfileState> {
         bool isError = false;
         if (response.response!.code != null) {
           if (response.response!.code!.toLowerCase() == "00") {
-            emit(UpdateProfileLoaded(
-                response: response.response!.data!));
+            emit(UpdateProfileLoaded(response: response.response!.data!));
           } else {
             isError = true;
           }

@@ -32,7 +32,10 @@ class ItemMenu extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(
-                  left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: 12.sp, top: 12.sp),
+                  left: pxToSp(context, 25),
+                  right: pxToSp(context, 25),
+                  bottom: 12.sp,
+                  top: 12.sp),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -45,8 +48,7 @@ class ItemMenu extends StatelessWidget {
                             menuModel.name,
                             textAlign: TextAlign.left,
                             style: AppThemeNotifier.getTextStyleFromTheme(
-                              baseStyle:
-                                  Theme.of(context).textTheme.bodyMedium,
+                              baseStyle: Theme.of(context).textTheme.bodyMedium,
                             ),
                           ),
                         ),

@@ -1667,7 +1667,7 @@ abstract class AppLocalizations {
   /// No description provided for @aiChatMissingApiKey.
   ///
   /// In en, this message translates to:
-  /// **'AI chat is not configured. Add GOOGLE_GENAI_API_KEY to your .env file.'**
+  /// **'AI chat is not configured. Add OPENROUTER_API_KEY to your .env file.'**
   String get aiChatMissingApiKey;
 
   /// No description provided for @aiChatErrorGeneric.
@@ -1759,6 +1759,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'New password must be different from your current password'**
   String get errorNewPasswordSameAsOld;
+
+  /// No description provided for @chatTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Chat'**
+  String get chatTitle;
+
+  /// No description provided for @chatEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Chat'**
+  String get chatEmptyTitle;
+
+  /// No description provided for @chatEmptySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Ask me anything'**
+  String get chatEmptySubtitle;
+
+  /// No description provided for @chatInputHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Type a message...'**
+  String get chatInputHint;
+
+  /// No description provided for @chatClearTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear Chat'**
+  String get chatClearTitle;
+
+  /// No description provided for @chatClearContent.
+  ///
+  /// In en, this message translates to:
+  /// **'All messages will be deleted.'**
+  String get chatClearContent;
+
+  /// No description provided for @chatClearConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get chatClearConfirm;
+
+  /// No description provided for @chatRetry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get chatRetry;
+
+  /// No description provided for @chatTyping.
+  ///
+  /// In en, this message translates to:
+  /// **'Typing...'**
+  String get chatTyping;
 }
 
 class _AppLocalizationsDelegate

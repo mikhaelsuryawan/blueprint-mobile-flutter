@@ -148,13 +148,15 @@ class RemoteConfigController extends ChangeNotifier {
       _updateResult = await _remoteConfigService.checkUpdateRequired();
 
       // Get update message and iOS App ID
-      _updateMessage = _remoteConfigService.getUpdateMessage() ?? 'Update aplikasimu';
+      _updateMessage =
+          _remoteConfigService.getUpdateMessage() ?? 'Update aplikasimu';
       _iOSAppId = _remoteConfigService.getiOSAppId() ?? '';
       _packageName = _packageInfo!.packageName;
 
       if (kDebugMode) {
         print('📦 Package: $_packageName');
-        print('📱 Version: ${_packageInfo!.version} (${_packageInfo!.buildNumber})');
+        print(
+            '📱 Version: ${_packageInfo!.version} (${_packageInfo!.buildNumber})');
       }
 
       _isCheckingUpdate = false;

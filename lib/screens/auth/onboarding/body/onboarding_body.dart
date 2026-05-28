@@ -79,8 +79,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
           return SafeArea(
             child: Center(
               child: Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: pxToSp(context, 24)),
+                padding: EdgeInsets.symmetric(horizontal: pxToSp(context, 24)),
                 child: Text(
                   state.error.toString(),
                   textAlign: TextAlign.center,

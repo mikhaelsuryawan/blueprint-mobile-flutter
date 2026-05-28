@@ -80,7 +80,8 @@ class ProjectCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Icon(data.icon,
-                    color: Theme.of(context).iconTheme.color, size: pxToSp(context, 18)),
+                    color: Theme.of(context).iconTheme.color,
+                    size: pxToSp(context, 18)),
                 SizedBox(width: pxToSp(context, 8)),
                 Expanded(
                   child: Text(

@@ -816,7 +816,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get aiChatMissingApiKey =>
-      'Obrolan AI belum dikonfigurasi. Tambahkan GOOGLE_GENAI_API_KEY ke file .env Anda.';
+      'Obrolan AI belum dikonfigurasi. Tambahkan OPENROUTER_API_KEY ke file .env Anda.';
 
   @override
   String get aiChatErrorGeneric => 'Terjadi kesalahan. Silakan coba lagi.';
@@ -865,4 +865,31 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get errorNewPasswordSameAsOld =>
       'Kata sandi baru harus berbeda dari kata sandi saat ini';
+
+  @override
+  String get chatTitle => 'Chat AI';
+
+  @override
+  String get chatEmptyTitle => 'Chat AI';
+
+  @override
+  String get chatEmptySubtitle => 'Tanyakan apa saja';
+
+  @override
+  String get chatInputHint => 'Ketik pesan...';
+
+  @override
+  String get chatClearTitle => 'Hapus Chat';
+
+  @override
+  String get chatClearContent => 'Semua pesan akan dihapus.';
+
+  @override
+  String get chatClearConfirm => 'Hapus';
+
+  @override
+  String get chatRetry => 'Coba lagi';
+
+  @override
+  String get chatTyping => 'Mengetik...';
 }

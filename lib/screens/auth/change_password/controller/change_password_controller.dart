@@ -238,9 +238,7 @@ class ChangePasswordController extends ChangeNotifier {
     if (newTrim.isEmpty) {
       newValid = false;
       newError = _hasNewBeenTouched ? _l10nNewPasswordRequired : null;
-    } else if (oldTrim.isNotEmpty &&
-        newTrim.isNotEmpty &&
-        oldTrim == newTrim) {
+    } else if (oldTrim.isNotEmpty && newTrim.isNotEmpty && oldTrim == newTrim) {
       newValid = false;
       newError = _hasNewBeenTouched ? _l10nNewPasswordSameAsOld : null;
     } else {
@@ -332,9 +330,7 @@ class ChangePasswordController extends ChangeNotifier {
   }
 
   bool get isValid =>
-      _isOldPasswordValid &&
-      _isNewPasswordValid &&
-      _isConfirmPasswordValid;
+      _isOldPasswordValid && _isNewPasswordValid && _isConfirmPasswordValid;
 
   bool validateAll() {
     _hasOldBeenTouched = true;

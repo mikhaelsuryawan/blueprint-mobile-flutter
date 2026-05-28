@@ -27,7 +27,8 @@ class RefreshTokenBloc extends Bloc<RefreshTokenEvent, RefreshTokenState> {
         if (response.response?.messageEn?.toLowerCase() == "success")
           emit(RefreshTokenLoaded(response: response));
         else
-          emit(RefreshTokenError(textError: response.response?.messageEn ?? ""));
+          emit(
+              RefreshTokenError(textError: response.response?.messageEn ?? ""));
       } else if (event is AuthTokenFetched) {
         emit(RefreshTokenLoading());
         AuthTokenResponse response =
@@ -36,7 +37,8 @@ class RefreshTokenBloc extends Bloc<RefreshTokenEvent, RefreshTokenState> {
         if (response.response?.messageEn?.toLowerCase() == "success")
           emit(RefreshTokenLoaded(response: response));
         else
-          emit(RefreshTokenError(textError: response.response?.messageEn ?? ""));
+          emit(
+              RefreshTokenError(textError: response.response?.messageEn ?? ""));
       }
     });
   }

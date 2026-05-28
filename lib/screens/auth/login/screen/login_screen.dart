@@ -12,7 +12,8 @@ class LoginScreen extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<LoginBloc>(
-          create: (BuildContext context) => LoginBloc(repository: LoginService()),
+          create: (BuildContext context) =>
+              LoginBloc(repository: LoginService()),
         ),
       ],
       child: LoginBody(),

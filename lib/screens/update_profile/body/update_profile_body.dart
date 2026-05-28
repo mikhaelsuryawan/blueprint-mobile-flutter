@@ -97,8 +97,8 @@ class _UpdateProfileBodyState extends State<UpdateProfileBody> {
           child: ListenableBuilder(
             listenable: _controller,
             builder: (context, _) {
-              final invalid = _controller.hasNameBeenTouched &&
-                  !_controller.isNameValid;
+              final invalid =
+                  _controller.hasNameBeenTouched && !_controller.isNameValid;
               return TextfieldDefault(
                 key: const Key('update_profile_name'),
                 controller: _controller.nameController,
@@ -143,8 +143,8 @@ class _UpdateProfileBodyState extends State<UpdateProfileBody> {
           child: ListenableBuilder(
             listenable: _controller,
             builder: (context, _) {
-              final invalid = _controller.hasPhoneBeenTouched &&
-                  !_controller.isPhoneValid;
+              final invalid =
+                  _controller.hasPhoneBeenTouched && !_controller.isPhoneValid;
               return TextfieldDefault(
                 key: const Key('update_profile_phone'),
                 controller: _controller.phoneController,
@@ -334,8 +334,7 @@ class _UpdateProfileBodyState extends State<UpdateProfileBody> {
           margin: EdgeInsets.all(pxToSp(context, 18)),
           child: BlocListener<UpdateProfileBloc, UpdateProfileState>(
             listenWhen: (previous, current) =>
-                current is UpdateProfileLoaded ||
-                current is UpdateProfileError,
+                current is UpdateProfileLoaded || current is UpdateProfileError,
             listener: (context, state) {
               if (state is UpdateProfileLoaded) {
                 Helpers.onWidgetDidBuild(() {

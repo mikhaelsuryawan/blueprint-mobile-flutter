@@ -17,19 +17,16 @@ class LanguageModel {
     List<LanguageModel> _data = [];
 
     _data.add(LanguageModel(
-      name: 'English',
-      id: 'en',
-      assetPath: Assets.english,
-      isSelected: false
-    ));
+        name: 'English',
+        id: 'en',
+        assetPath: Assets.english,
+        isSelected: false));
     _data.add(LanguageModel(
         name: 'Bahasa Indonesia',
         id: 'id',
         assetPath: Assets.indonesia,
-        isSelected: false
-    ));
+        isSelected: false));
 
     return _data;
   }
-
 }

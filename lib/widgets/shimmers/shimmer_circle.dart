@@ -6,8 +6,7 @@ import 'package:sizer/sizer.dart';
 class ShimmerCircle extends StatelessWidget {
   final double radius;
 
-  const ShimmerCircle({Key? key, required this.radius})
-      : super(key: key);
+  const ShimmerCircle({Key? key, required this.radius}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -176,7 +176,8 @@ double pxToSp(BuildContext context, double px) {
   final isTablet =
       screenWidth > 600 ? true : Device.screenType == ScreenType.tablet;
 
-  final exponent = isTablet ? _tabletExponentForPx(px) : _mobileExponentForPx(px);
+  final exponent =
+      isTablet ? _tabletExponentForPx(px) : _mobileExponentForPx(px);
 
   final screenDiagonal = sqrt(
       pow(screenWidthInches, exponent) + pow(screenHeightInches, exponent));

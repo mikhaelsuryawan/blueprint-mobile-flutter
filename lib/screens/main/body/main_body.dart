@@ -14,6 +14,7 @@ import '../../../utils/helpers.dart';
 import '../../../utils/responsive_configuration.dart';
 import '../../../widgets/dialog/dialog_exit_app.dart';
 import '../../ai_chat/screen/ai_chat_screen.dart';
+import '../../chat/screen/chat_screen.dart';
 import '../../home/screen/home_screen.dart';
 import '../../my_career/screen/my_career_screen.dart';
 import '../../profile/screen/profile_screen.dart';
@@ -60,7 +61,7 @@ class _MainBodyState extends State<MainBody>
     childrenMenu = const [
       HomeScreen(),
       MyCareerScreen(),
-      AiChatScreen(),
+      ChatScreen(),
       ProfileScreen(),
     ];
     _currentIndex = widget.argumentsMain.currentIndex;

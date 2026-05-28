@@ -21,6 +21,7 @@ import '../../../../widgets/buttons/oval_button_large.dart';
 import '../../../../widgets/buttons/oval_button_small.dart';
 import '../../../../widgets/default_appbar.dart';
 import '../../../../utils/responsive_configuration.dart';
+
 class ButtonBody extends StatefulWidget {
   const ButtonBody({super.key});
 
@@ -61,13 +62,14 @@ class _ButtonBodyState extends State<ButtonBody> {
                           height: pxToSp(context, 25),
                         ),
                         Container(
-                          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                          margin: EdgeInsets.only(
+                              left: pxToSp(context, 25),
+                              right: pxToSp(context, 25)),
                           width: 100.w,
                           child: Text(
                             'Change Color',
                             style: AppThemeNotifier.getTextStyleFromTheme(
-                              baseStyle:
-                                  Theme.of(context).textTheme.bodyMedium,
+                              baseStyle: Theme.of(context).textTheme.bodyMedium,
                             ),
                           ),
                         ),
@@ -93,8 +95,8 @@ class _ButtonBodyState extends State<ButtonBody> {
                                     child: Text(
                                       'Red',
                                       textAlign: TextAlign.left,
-                                      style:
-                                          AppThemeNotifier.getTextStyleFromTheme(
+                                      style: AppThemeNotifier
+                                          .getTextStyleFromTheme(
                                         color: AppColors.red_main_500,
                                         baseStyle: Theme.of(context)
                                             .textTheme
@@ -137,8 +139,8 @@ class _ButtonBodyState extends State<ButtonBody> {
                                     child: Text(
                                       'Blue',
                                       textAlign: TextAlign.left,
-                                      style:
-                                          AppThemeNotifier.getTextStyleFromTheme(
+                                      style: AppThemeNotifier
+                                          .getTextStyleFromTheme(
                                         color: AppColors.blue_main_500,
                                         baseStyle: Theme.of(context)
                                             .textTheme
@@ -181,10 +183,9 @@ class _ButtonBodyState extends State<ButtonBody> {
                                     child: Text(
                                       'Yellow',
                                       textAlign: TextAlign.left,
-                                      style:
-                                          AppThemeNotifier.getTextStyleFromTheme(
-                                        color:
-                                            AppColors.warning_primary_500,
+                                      style: AppThemeNotifier
+                                          .getTextStyleFromTheme(
+                                        color: AppColors.warning_primary_500,
                                         baseStyle: Theme.of(context)
                                             .textTheme
                                             .bodyMedium,
@@ -226,8 +227,8 @@ class _ButtonBodyState extends State<ButtonBody> {
                                     child: Text(
                                       'Green',
                                       textAlign: TextAlign.left,
-                                      style:
-                                          AppThemeNotifier.getTextStyleFromTheme(
+                                      style: AppThemeNotifier
+                                          .getTextStyleFromTheme(
                                         color: AppColors.green_main_500,
                                         baseStyle: Theme.of(context)
                                             .textTheme
@@ -273,7 +274,10 @@ class _ButtonBodyState extends State<ButtonBody> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), top: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              top: pxToSp(context, 25)),
           child: Text(
             "Small",
             style: AppThemeNotifier.getTextStyleFromTheme(
@@ -294,7 +298,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -311,7 +316,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonSmall(
             isFullWidth: true,
             text: 'Submit',
@@ -321,7 +329,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonSmall(
             isFullWidth: true,
             text: 'Submit',
@@ -333,7 +344,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonSmall(
             text: "Submit",
             isFullWidth: true,
@@ -343,7 +357,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonSmall(
             text: "Submit",
             isFullWidth: true,
@@ -367,7 +384,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -384,7 +402,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalButtonSmall(
             isFullWidth: true,
             text: 'Submit',
@@ -394,7 +415,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalButtonSmall(
             isFullWidth: true,
             text: 'Submit',
@@ -406,7 +430,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalBorderButtonSmall(
             text: "Submit",
             isFullWidth: true,
@@ -416,7 +443,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalBorderButtonSmall(
             text: "Submit",
             isFullWidth: true,
@@ -440,7 +470,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -457,7 +488,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonIcon(
             icon: Assets.edit,
             onPressed: () {},
@@ -468,7 +502,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonIcon(
             icon: Assets.edit,
             onPressed: () {},
@@ -486,14 +523,20 @@ class _ButtonBodyState extends State<ButtonBody> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), top: 14.sp),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              top: 14.sp),
           child: Divider(
             height: 5.sp,
             color: AppColors.disabled_light,
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), top: 14.sp),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              top: 14.sp),
           child: Text(
             "Medium",
             style: AppThemeNotifier.getTextStyleFromTheme(
@@ -514,7 +557,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -531,7 +575,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonMedium(
             text: "Submit",
             onPressed: () {},
@@ -541,7 +588,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonMedium(
             text: "Submit",
             onPressed: () {},
@@ -553,7 +603,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonMedium(
             text: "Submit",
             isFullWidth: true,
@@ -563,7 +616,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonMedium(
             text: "Submit",
             isFullWidth: true,
@@ -587,7 +643,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -604,7 +661,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalButtonMedium(
             text: "Submit",
             onPressed: () {},
@@ -614,7 +674,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalButtonMedium(
             text: "Submit",
             onPressed: () {},
@@ -626,7 +689,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalBorderButtonMedium(
             text: "Submit",
             isFullWidth: true,
@@ -636,7 +702,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalBorderButtonMedium(
             text: "Submit",
             isFullWidth: true,
@@ -660,7 +729,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -677,7 +747,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonIcon(
             icon: Assets.edit,
             onPressed: () {},
@@ -688,7 +761,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonIcon(
             icon: Assets.edit,
             onPressed: () {},
@@ -706,14 +782,20 @@ class _ButtonBodyState extends State<ButtonBody> {
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), top: 14.sp),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              top: 14.sp),
           child: Divider(
             height: 5.sp,
             color: AppColors.disabled_light,
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), top: 14.sp),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              top: 14.sp),
           child: Text(
             "Large",
             style: AppThemeNotifier.getTextStyleFromTheme(
@@ -734,7 +816,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -751,7 +834,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonLarge(
             text: "Submit",
             onPressed: () {},
@@ -761,7 +847,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonLarge(
             text: "Submit",
             onPressed: () {},
@@ -773,7 +862,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonLarge(
             text: "Submit",
             isFullWidth: true,
@@ -783,7 +875,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonLarge(
             text: "Submit",
             isFullWidth: true,
@@ -807,7 +902,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -824,7 +920,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalButtonLarge(
             text: "Submit",
             onPressed: () {},
@@ -834,7 +933,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalButtonLarge(
             text: "Submit",
             onPressed: () {},
@@ -846,7 +948,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalBorderButtonLarge(
             text: "Submit",
             isFullWidth: true,
@@ -856,7 +961,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: OvalBorderButtonLarge(
             text: "Submit",
             isFullWidth: true,
@@ -880,7 +988,8 @@ class _ButtonBodyState extends State<ButtonBody> {
               ),
               Expanded(
                 child: Container(
-                  margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25)),
+                  margin: EdgeInsets.only(
+                      left: pxToSp(context, 25), right: pxToSp(context, 25)),
                   child: Divider(
                     height: 1.sp,
                     color: AppColors.disabled_light,
@@ -897,7 +1006,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeButtonIcon(
             icon: Assets.edit,
             onPressed: () {},
@@ -908,7 +1020,10 @@ class _ButtonBodyState extends State<ButtonBody> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(left: pxToSp(context, 25), right: pxToSp(context, 25), bottom: pxToSp(context, 25)),
+          margin: EdgeInsets.only(
+              left: pxToSp(context, 25),
+              right: pxToSp(context, 25),
+              bottom: pxToSp(context, 25)),
           child: EdgeBorderButtonIcon(
             icon: Assets.edit,
             onPressed: () {},

@@ -14,8 +14,7 @@ class MenuModel {
   static List<MenuModel> getData() {
     List<MenuModel> _data = [];
 
-    _data.add(MenuModel(name: 'Button', price: 5000,
-        urlImage: Assets.noImage));
+    _data.add(MenuModel(name: 'Button', price: 5000, urlImage: Assets.noImage));
 
     return _data;
   }

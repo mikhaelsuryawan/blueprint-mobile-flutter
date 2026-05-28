@@ -69,7 +69,8 @@ class _ThemeBodyState extends State<ThemeBody> {
                       color: isSelected
                           ? AppColors.accent_light
                           : Theme.of(context).cardColor),
-                  borderRadius: BorderRadius.all(Radius.circular(pxToSp(context, 12)))),
+                  borderRadius:
+                      BorderRadius.all(Radius.circular(pxToSp(context, 12)))),
               child: Card(
                 margin: EdgeInsets.symmetric(horizontal: 0.0),
                 color: isSelected
@@ -81,7 +82,8 @@ class _ThemeBodyState extends State<ThemeBody> {
                 ),
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                      horizontal: pxToSp(context, 14), vertical: pxToSp(context, 14)),
+                      horizontal: pxToSp(context, 14),
+                      vertical: pxToSp(context, 14)),
                   child: Text(
                     data.name,
                     style: AppThemeNotifier.getTextStyleFromTheme(
@@ -100,7 +102,10 @@ class _ThemeBodyState extends State<ThemeBody> {
 
   Widget _body() {
     return Container(
-      padding: EdgeInsets.only(left: pxToSp(context, 18), right: pxToSp(context, 18), top: pxToSp(context, 18)),
+      padding: EdgeInsets.only(
+          left: pxToSp(context, 18),
+          right: pxToSp(context, 18),
+          top: pxToSp(context, 18)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

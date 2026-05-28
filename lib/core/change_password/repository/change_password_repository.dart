@@ -26,7 +26,7 @@ class ChangePasswordService implements ChangePasswordRepository {
     );
 
     if (response.statusCode == 200) {
-    ChangePasswordResponse data =
+      ChangePasswordResponse data =
           changePasswordResponseFromJson(response.toString());
       return data;
     } else {

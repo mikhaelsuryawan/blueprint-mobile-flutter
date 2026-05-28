@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:googleai_dart/googleai_dart.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../../config/language/app_localizations.dart';
 import '../../../config/themes/app_colors.dart';
 import '../../../config/themes/notifiers/theme_manager.dart';
 import '../../../constants/assets_path.dart';
+import '../../../core/ai_chat/model/request/open_router_chat_request.dart';
+import '../../../core/ai_chat/repository/ai_chat_repository.dart';
 import '../../../utils/responsive_configuration.dart';
 import '../../../widgets/default_appbar.dart';
 import '../../../widgets/textfield/textfield_default.dart';
@@ -33,9 +34,9 @@ class AiChatBody extends StatefulWidget {
 
 class _AiChatBodyState extends State<AiChatBody>
     with SingleTickerProviderStateMixin {
-  static const _envApiKey = 'GOOGLE_GENAI_API_KEY';
-  static const _envModel = 'GEMINI_MODEL';
-  static const _defaultModel = 'gemini-2.0-flash';
+  static const _envApiKey = 'OPENROUTER_API_KEY';
+  static const _envModel = 'OPENROUTER_MODEL';
+  static const _defaultModel = 'deepseek/deepseek-v4-flash:free';
 
   final TextEditingController _messageController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
@@ -44,7 +45,7 @@ class _AiChatBodyState extends State<AiChatBody>
   late AnimationController _animationController;
   late Animation<double> _animation;
 
-  GoogleAIClient? _geminiClient;
+  final AiChatRepository _aiChatRepository = AiChatService();
   bool _awaitingAssistant = false;
 
   @override
@@ -69,7 +70,6 @@ class _AiChatBodyState extends State<AiChatBody>
 
   @override
   void dispose() {
-    _geminiClient?.close();
     _messageController.dispose();
     _scrollController.dispose();
     _focusNode.dispose();
@@ -88,27 +88,35 @@ class _AiChatBodyState extends State<AiChatBody>
     });
   }
 
-  String _geminiApiKey() => (dotenv.env[_envApiKey] ?? '').trim();
+  String _openRouterApiKey() => (dotenv.env[_envApiKey] ?? '').trim();
 
-  String _geminiModelId() {
+  String _openRouterModelId() {
     final fromEnv = (dotenv.env[_envModel] ?? '').trim();
     return fromEnv.isEmpty ? _defaultModel : fromEnv;
   }
 
-  GoogleAIClient _clientForKey(String apiKey) {
-    _geminiClient ??= GoogleAIClient(
-      config: GoogleAIConfig.googleAI(
-        authProvider: ApiKeyProvider(apiKey),
-      ),
-    );
-    return _geminiClient!;
+  List<OpenRouterChatMessage> _historyAsOpenRouterMessages() {
+    return _messages
+        .map(
+          (message) => OpenRouterChatMessage(
+            role: message.isUser ? 'user' : 'assistant',
+            content: message.content,
+          ),
+        )
+        .toList();
   }
 
-  List<Content> _historyAsContents() {
-    return _messages.map((m) {
-      if (m.isUser) return Content.text(m.content);
-      return Content.model([TextPart(m.content)]);
-    }).toList();
+  Future<String?> _sendOpenRouterChatCompletion({
+    required String apiKey,
+  }) async {
+    final response = await _aiChatRepository.sendMessage(
+      apiKey: apiKey,
+      request: OpenRouterChatRequest(
+        model: _openRouterModelId(),
+        messages: _historyAsOpenRouterMessages(),
+      ),
+    );
+    return response.content;
   }
 
   Future<void> _sendMessage() async {
@@ -116,7 +124,7 @@ class _AiChatBodyState extends State<AiChatBody>
     if (text.isEmpty || _awaitingAssistant) return;
 
     final loc = GetAppLocalizations(context);
-    final apiKey = _geminiApiKey();
+    final apiKey = _openRouterApiKey();
     if (apiKey.isEmpty) {
       setState(() {
         _messages.add(ChatMessage(content: text, isUser: true));
@@ -137,14 +145,9 @@ class _AiChatBodyState extends State<AiChatBody>
     _scrollToBottom();
 
     try {
-      final client = _clientForKey(apiKey);
-      final response = await client.models.generateContent(
-        model: _geminiModelId(),
-        request: GenerateContentRequest(contents: _historyAsContents()),
-      );
+      final reply = await _sendOpenRouterChatCompletion(apiKey: apiKey);
 
       if (!mounted) return;
-      final reply = response.text?.trim();
       setState(() {
         _awaitingAssistant = false;
         if (reply == null || reply.isEmpty) {
@@ -155,12 +158,17 @@ class _AiChatBodyState extends State<AiChatBody>
           _messages.add(ChatMessage(content: reply, isUser: false));
         }
       });
-    } on GoogleAIException {
+    } on AiChatRepositoryException catch (error) {
       if (!mounted) return;
       setState(() {
         _awaitingAssistant = false;
         _messages.add(
-          ChatMessage(content: loc.aiChatErrorGeneric, isUser: false),
+          ChatMessage(
+            content: error.message?.isNotEmpty == true
+                ? error.message!
+                : loc.aiChatErrorGeneric,
+            isUser: false,
+          ),
         );
       });
     } catch (_) {

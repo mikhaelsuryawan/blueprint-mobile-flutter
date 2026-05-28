@@ -9,12 +9,12 @@ class ShimmerRoundedRectangle extends StatelessWidget {
   final double height;
   final double borderRadius;
 
-  const ShimmerRoundedRectangle({
-    Key? key,
-    required this.width,
-    required this.height,
-    this.borderRadius = 10.0
-  }) : super(key: key);
+  const ShimmerRoundedRectangle(
+      {Key? key,
+      required this.width,
+      required this.height,
+      this.borderRadius = 10.0})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

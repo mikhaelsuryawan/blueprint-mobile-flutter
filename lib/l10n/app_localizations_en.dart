@@ -818,7 +818,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aiChatMissingApiKey =>
-      'AI chat is not configured. Add GOOGLE_GENAI_API_KEY to your .env file.';
+      'AI chat is not configured. Add OPENROUTER_API_KEY to your .env file.';
 
   @override
   String get aiChatErrorGeneric => 'Something went wrong. Please try again.';
@@ -868,4 +868,31 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get errorNewPasswordSameAsOld =>
       'New password must be different from your current password';
+
+  @override
+  String get chatTitle => 'AI Chat';
+
+  @override
+  String get chatEmptyTitle => 'AI Chat';
+
+  @override
+  String get chatEmptySubtitle => 'Ask me anything';
+
+  @override
+  String get chatInputHint => 'Type a message...';
+
+  @override
+  String get chatClearTitle => 'Clear Chat';
+
+  @override
+  String get chatClearContent => 'All messages will be deleted.';
+
+  @override
+  String get chatClearConfirm => 'Clear';
+
+  @override
+  String get chatRetry => 'Retry';
+
+  @override
+  String get chatTyping => 'Typing...';
 }

@@ -29,9 +29,8 @@ class OnboardingBodyController {
 
   void handleNextOrFinish(BuildContext context, OnboardingBloc bloc) {
     final state = bloc.state;
-    final list = state is OnBoardingLoaded
-        ? state.onBoardingList
-        : <OnBoardingModel>[];
+    final list =
+        state is OnBoardingLoaded ? state.onBoardingList : <OnBoardingModel>[];
 
     if (list.isEmpty) {
       context.goTo(loginRoute);

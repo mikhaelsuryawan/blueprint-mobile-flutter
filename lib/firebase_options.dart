@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '840228174511',
     projectId: 'blueprint-mobile-dart',
     storageBucket: 'blueprint-mobile-dart.appspot.com',
-    iosClientId: '840228174511-78cd9ldnk73q2do0opg9cbatdqeqhnr5.apps.googleusercontent.com',
+    iosClientId:
+        '840228174511-78cd9ldnk73q2do0opg9cbatdqeqhnr5.apps.googleusercontent.com',
     iosBundleId: 'id.wit.blueprintMobileDart',
   );
 }

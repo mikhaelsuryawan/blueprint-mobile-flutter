@@ -52,8 +52,7 @@ class LocalStorageService {
   static void setProfile(ProfileDetailData profile) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.remove(AppConstant.profileData);
-    await prefs.setString(
-        AppConstant.profileData, detailDataToJson(profile));
+    await prefs.setString(AppConstant.profileData, detailDataToJson(profile));
 
     return;
   }
@@ -70,7 +69,7 @@ class LocalStorageService {
   static Future<ProfileDetailData?> getProfile() async {
     final SharedPreferences pref = await SharedPreferences.getInstance();
     var profileData = pref.getString(AppConstant.profileData) ?? "";
-    return profileData.isEmpty? null : detailDataFromJson(profileData);
+    return profileData.isEmpty ? null : detailDataFromJson(profileData);
   }
 
   // Save data login
@@ -150,9 +149,9 @@ class LocalStorageService {
       AppConstant.discountType: 'percent',
     };
 
-    return pref.getString(AppConstant.discount) != null ?
-    jsonDecode(pref.getString(AppConstant.discount)!) :
-    defaultDiscount;
+    return pref.getString(AppConstant.discount) != null
+        ? jsonDecode(pref.getString(AppConstant.discount)!)
+        : defaultDiscount;
   }
 
   // Save data Order Type
@@ -173,9 +172,9 @@ class LocalStorageService {
   static Future<Map<String, dynamic>?> getOrderType() async {
     final SharedPreferences pref = await SharedPreferences.getInstance();
 
-    return pref.getString(AppConstant.orderType) != null ?
-    jsonDecode(pref.getString(AppConstant.orderType)!) :
-    null;
+    return pref.getString(AppConstant.orderType) != null
+        ? jsonDecode(pref.getString(AppConstant.orderType)!)
+        : null;
   }
 
   // Save data Note
@@ -226,10 +225,8 @@ class LocalStorageService {
   static void setPrinter(String printerName, String printerMacAddress) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.remove(AppConstant.printerName);
-    await prefs.setString(
-        AppConstant.printerName, printerName);
-    await prefs.setString(
-        AppConstant.printerMacAddress, printerMacAddress);
+    await prefs.setString(AppConstant.printerName, printerName);
+    await prefs.setString(AppConstant.printerMacAddress, printerMacAddress);
 
     return;
   }
@@ -237,8 +234,7 @@ class LocalStorageService {
   static void setTypePrint(String printerType) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.remove(AppConstant.typePrint);
-    await prefs.setString(
-        AppConstant.typePrint, printerType);
+    await prefs.setString(AppConstant.typePrint, printerType);
 
     return;
   }

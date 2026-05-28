@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utils/responsive_configuration.dart';
+
 // Widget edge button using icon small
 class EdgeButtonIcon extends StatelessWidget {
   final String icon;

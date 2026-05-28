@@ -12,12 +12,12 @@ class Message {
   String? message;
 
   factory Message.fromJson(Map<String, dynamic> json) => Message(
-    message: json["message"] == null ? "" : json["message"],
-  );
+        message: json["message"] == null ? "" : json["message"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "message": message == null ? "" : message,
-  };
+        "message": message == null ? "" : message,
+      };
 }
 
 Message2 message2FromJson(String str) => Message2.fromJson(json.decode(str));
@@ -38,20 +38,20 @@ class Message2 {
   });
 
   factory Message2.fromJson(Map<String, dynamic> json) => Message2(
-    appName: json["app_name"],
-    version: json["version"],
-    build: json["build"],
-    response: json["response"] == null
-        ? null
-        : MessageDetail.fromJson(json["response"]),
-  );
+        appName: json["app_name"],
+        version: json["version"],
+        build: json["build"],
+        response: json["response"] == null
+            ? null
+            : MessageDetail.fromJson(json["response"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "app_name": appName,
-    "version": version,
-    "build": build,
-    "response": response?.toJson(),
-  };
+        "app_name": appName,
+        "version": version,
+        "build": build,
+        "response": response?.toJson(),
+      };
 }
 
 class MessageDetail {
@@ -64,12 +64,12 @@ class MessageDetail {
   });
 
   factory MessageDetail.fromJson(Map<String, dynamic> json) => MessageDetail(
-    messageEn: json["message_en"],
-    messageId: json["message_id"],
-  );
+        messageEn: json["message_en"],
+        messageId: json["message_id"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "message_en": messageEn,
-    "message_id": messageId,
-  };
+        "message_en": messageEn,
+        "message_id": messageId,
+      };
 }

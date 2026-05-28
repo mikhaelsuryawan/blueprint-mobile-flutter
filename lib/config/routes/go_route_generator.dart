@@ -11,6 +11,7 @@ import '../../screens/auth/login/screen/login_screen.dart';
 import '../../screens/auth/onboarding/screen/onboarding_screen.dart';
 import '../../screens/auth/sign_up/screen/sign_up_screen.dart';
 import '../../screens/auth/splash/screen/splash_screen.dart';
+import '../../screens/chat/screen/chat_screen.dart';
 import '../../screens/main/screen/main_screen.dart';
 import '../../screens/my_career/screen/my_career_screen.dart';
 import '../../screens/not_found/screen/not_found_screen.dart';
@@ -182,6 +183,19 @@ final GoRouter appRouter = GoRouter(
       pageBuilder: (context, state) => buildAnimatedPage(
         child: const AiChatScreen(),
         name: aiChatRoute,
+        transition: AppTransition.fade,
+        duration: const Duration(milliseconds: 600),
+        arguments: state.extra,
+      ),
+    ),
+
+    // Chat Route
+    GoRoute(
+      path: chatRoute,
+      name: 'chat',
+      pageBuilder: (context, state) => buildAnimatedPage(
+        child: const ChatScreen(),
+        name: chatRoute,
         transition: AppTransition.fade,
         duration: const Duration(milliseconds: 600),
         arguments: state.extra,

@@ -69,8 +69,7 @@ class FormSignUpController extends ChangeNotifier {
   bool get birthDateFieldInvalid =>
       _hasBirthDateBeenTouched && _selectedBirthDate == null;
 
-  bool get genderFieldInvalid =>
-      _hasGenderBeenTouched && _genderId == 0;
+  bool get genderFieldInvalid => _hasGenderBeenTouched && _genderId == 0;
 
   bool get emailFieldInvalid {
     if (!_hasEmailBeenTouched) return false;

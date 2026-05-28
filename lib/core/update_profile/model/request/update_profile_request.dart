@@ -144,11 +144,14 @@ class UpdateProfileRequest {
         brandName: json["brand_name"],
       );
 
-  factory UpdateProfileRequest.fromProfileJson(Map<String, dynamic> json) => UpdateProfileRequest(
+  factory UpdateProfileRequest.fromProfileJson(Map<String, dynamic> json) =>
+      UpdateProfileRequest(
         guid: json["guid"],
         fullname: json["fullname"],
         nickname: json["nickname"],
-        dateOfBirth: json["date_of_birth"] == null ? null : DateTime.parse(json["date_of_birth"]),
+        dateOfBirth: json["date_of_birth"] == null
+            ? null
+            : DateTime.parse(json["date_of_birth"]),
         gender: json["gender"],
         addressIdCard: json["address_id_card"],
         addressDomicile: json["address_domicile"],
@@ -165,28 +168,51 @@ class UpdateProfileRequest {
         bpjsKetenagakerjaan: json["bpjs_ketenagakerjaan"],
         urlProfilePicture: json["url_profile_picture"],
         aboutMe: json["about_me"],
-        skills: json["skills"] == null ? [] : List<String>.from(json["skills"]!.map((x) => x)),
+        skills: json["skills"] == null
+            ? []
+            : List<String>.from(json["skills"]!.map((x) => x)),
         interests: json["interests"],
         expertise: json["expertise"],
         cvFileUrl: json["cv_file_url"],
-        urlSocialMedia: json["url_social_media"] == null ? [] : List<dynamic>.from(json["url_social_media"]!.map((x) => x)),
-        jobId: json["job"] == null ? null : Brand.fromJson(json["job"]).guid ?? '',
-        jobName: json["job"] == null ? null : Brand.fromJson(json["job"]).name ?? '',
-        outletId: json["outlet"] == null ? null : Brand.fromJson(json["outlet"]).guid ?? '',
-        outletName: json["outlet"] == null ? null : Brand.fromJson(json["outlet"]).name ?? '',
-        brandId: json["brand"] == null ? null : Brand.fromJson(json["brand"]).guid ?? '',
-        brandName: json["brand"] == null ? null : Brand.fromJson(json["brand"]).name ?? '',
-        subBrandId: json["subbrand"] == null ? null : Brand.fromJson(json["subbrand"]).guid ?? '',
-        subBrandName: json["subbrand"] == null ? null : Brand.fromJson(json["subbrand"]).name ?? '',
-        departmentId: json["department"] == null ? null : Brand.fromJson(json["department"]).guid ?? '',
-        departmentName: json["department"] == null ? null : Brand.fromJson(json["department"]).name ?? '',
-    );    
+        urlSocialMedia: json["url_social_media"] == null
+            ? []
+            : List<dynamic>.from(json["url_social_media"]!.map((x) => x)),
+        jobId:
+            json["job"] == null ? null : Brand.fromJson(json["job"]).guid ?? '',
+        jobName:
+            json["job"] == null ? null : Brand.fromJson(json["job"]).name ?? '',
+        outletId: json["outlet"] == null
+            ? null
+            : Brand.fromJson(json["outlet"]).guid ?? '',
+        outletName: json["outlet"] == null
+            ? null
+            : Brand.fromJson(json["outlet"]).name ?? '',
+        brandId: json["brand"] == null
+            ? null
+            : Brand.fromJson(json["brand"]).guid ?? '',
+        brandName: json["brand"] == null
+            ? null
+            : Brand.fromJson(json["brand"]).name ?? '',
+        subBrandId: json["subbrand"] == null
+            ? null
+            : Brand.fromJson(json["subbrand"]).guid ?? '',
+        subBrandName: json["subbrand"] == null
+            ? null
+            : Brand.fromJson(json["subbrand"]).name ?? '',
+        departmentId: json["department"] == null
+            ? null
+            : Brand.fromJson(json["department"]).guid ?? '',
+        departmentName: json["department"] == null
+            ? null
+            : Brand.fromJson(json["department"]).name ?? '',
+      );
 
   Map<String, dynamic> toJson() => {
         "guid": guid,
         "fullname": fullname,
         "nickname": nickname,
-        "date_of_birth": Helpers.formatDateOnlyForRequest(dateOfBirth ?? DateTime.now()),
+        "date_of_birth":
+            Helpers.formatDateOnlyForRequest(dateOfBirth ?? DateTime.now()),
         "gender": gender,
         "address_id_card": addressIdCard,
         "address_domicile": addressDomicile,
@@ -196,7 +222,8 @@ class UpdateProfileRequest {
         "phone_number": phoneNumber,
         "id_card": idCard,
         "npwp": npwp,
-        "join_date": Helpers.formatDateOnlyForRequest(joinDate ?? DateTime.now()),
+        "join_date":
+            Helpers.formatDateOnlyForRequest(joinDate ?? DateTime.now()),
         "nik": nik,
         "bank_name": bankName,
         "bank_account": bankAccount,

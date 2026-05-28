@@ -30,8 +30,7 @@ class RefreshTokenService implements RefreshTokenRepository {
         SecureStorageService.setApiToken(data.response?.data?.token ?? '');
         SecureStorageService.setRefreshApiToken(
             data.response?.data?.refreshToken ?? '');
-        SecureStorageService.setDeviceId(
-            data.response?.data?.deviceId ?? '');
+        SecureStorageService.setDeviceId(data.response?.data?.deviceId ?? '');
         SecureStorageService.setLogin(data.response?.data?.isLogin ?? false);
         return data;
       }

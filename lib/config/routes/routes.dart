@@ -42,3 +42,4 @@ const String buttonRoute = "/button";
 
 // AI Chat
 const String aiChatRoute = "/ai-chat";
+const String chatRoute = '/chat';

@@ -90,9 +90,9 @@ class DialogRemoteConfig extends StatelessWidget {
                       bottom: pxToSp(context, 25),
                     ),
                     child: EdgeBorderButtonMedium(
-                       borderColor: AppColors.accent_light,
-                    textColor: AppColors.accent_light,
-                    buttonColor: Theme.of(context).colorScheme.surface,
+                      borderColor: AppColors.accent_light,
+                      textColor: AppColors.accent_light,
+                      buttonColor: Theme.of(context).colorScheme.surface,
                       text: GetAppLocalizations(context).later,
                       onPressed: () {
                         Navigator.of(context).pop(true);

@@ -9,6 +9,8 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MainBody(argumentsMain: argumentsMain,);
+    return MainBody(
+      argumentsMain: argumentsMain,
+    );
   }
 }

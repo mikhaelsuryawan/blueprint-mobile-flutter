@@ -60,7 +60,7 @@ class RefreshTokenController extends ChangeNotifier {
       notifyListeners();
 
       final token = await FirebaseMessaging.instance.getToken();
-      
+
       if (token != null) {
         _fcmToken = token;
         Helpers.log("FCM token", token);
@@ -165,7 +165,7 @@ class RefreshTokenController extends ChangeNotifier {
       // Check if API token exists
       try {
         final apiToken = await SecureStorageService.getApiToken();
-        
+
         if (apiToken == null) {
           // No token exists - request new auth token
           refreshTokenBloc.add(AuthTokenFetched(request: request));

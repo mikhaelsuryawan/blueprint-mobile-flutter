@@ -266,7 +266,7 @@
   "aiChatEmptyTitle": "Mulai percakapan",
   "aiChatEmptySubtitle": "Tanya apa saja, saya siap membantu Anda",
   "aiChatSimulatedResponse": "Ini adalah respons AI simulasi. Ganti dengan integrasi AI Anda yang sebenarnya.",
-  "aiChatMissingApiKey": "Obrolan AI belum dikonfigurasi. Tambahkan GOOGLE_GENAI_API_KEY ke file .env Anda.",
+  "aiChatMissingApiKey": "Obrolan AI belum dikonfigurasi. Tambahkan OPENROUTER_API_KEY ke file .env Anda.",
   "aiChatErrorGeneric": "Terjadi kesalahan. Silakan coba lagi.",
   "aiChatNoResponse": "Tidak ada respons. Silakan coba lagi.",
   "aiChatLoading": "Berpikir…",
@@ -281,5 +281,14 @@
   "errorNewPasswordRequired": "Masukkan kata sandi baru",
   "errorConfirmPasswordRequired": "Konfirmasi kata sandi baru Anda",
   "errorPasswordMinLength": "Kata sandi minimal 6 karakter",
-  "errorNewPasswordSameAsOld": "Kata sandi baru harus berbeda dari kata sandi saat ini"
+  "errorNewPasswordSameAsOld": "Kata sandi baru harus berbeda dari kata sandi saat ini",
+  "chatTitle": "Chat AI",
+"chatEmptyTitle": "Chat AI",
+"chatEmptySubtitle": "Tanyakan apa saja",
+"chatInputHint": "Ketik pesan...",
+"chatClearTitle": "Hapus Chat",
+"chatClearContent": "Semua pesan akan dihapus.",
+"chatClearConfirm": "Hapus",
+"chatRetry": "Coba lagi",
+"chatTyping": "Mengetik..."
 }

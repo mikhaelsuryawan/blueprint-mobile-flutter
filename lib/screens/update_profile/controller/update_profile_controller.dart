@@ -317,10 +317,7 @@ class UpdateProfileController extends ChangeNotifier {
   }
 
   bool get isValid =>
-      _isNameValid &&
-      _isPhoneValid &&
-      _isAddressValid &&
-      _isGenderValid;
+      _isNameValid && _isPhoneValid && _isAddressValid && _isGenderValid;
 
   bool validateAll() {
     _hasNameBeenTouched = true;

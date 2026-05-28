@@ -11,7 +11,7 @@ import '../shimmers/shimmer_rounded_rectangle.dart';
 // Default image profile viewer
 class ImageProfileExtended extends StatelessWidget {
   const ImageProfileExtended({
-    Key?key,
+    Key? key,
     this.imageUrl = '',
     this.alt = '',
     this.useAlt = false,
@@ -65,7 +65,6 @@ class ImageProfileExtended extends StatelessWidget {
           );
         },
         placeholder: (context, url) {
-
           if (useShimmer) {
             return _placeholder;
           }
@@ -95,7 +94,8 @@ class ImageProfileExtended extends StatelessWidget {
   Widget get _noImageWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(borderRadius),
-      child: SvgPicture.asset(Assets.avatar,
+      child: SvgPicture.asset(
+        Assets.avatar,
         height: height,
         width: width,
         fit: BoxFit.cover,
