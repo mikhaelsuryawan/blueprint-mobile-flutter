@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <style>
+      text { font-family: 'SF Mono', 'Menlo', 'Consolas', monospace; font-size: 13px; }
+      .label { font-size: 11px; fill: #666; font-family: 'Inter', sans-serif; }
+      .arrow { fill: none; stroke: #888; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888" />
+    </marker>
+  </defs>
+
+  <!-- Before box -->
+  <rect x="10" y="20" width="580" height="70" rx="8" fill="#FFF3E0" stroke="#FFB74D" stroke-width="1.5"/>
+  <text x="20" y="40" font-weight="bold" fill="#E65100" font-size="12">BEFORE (Old Structure)</text>
+  <text x="20" y="62" fill="#333">android/app/src/main/kotlin/</text>
+  <rect x="260" y="48" rx="3" width="200" height="18" fill="#FFE0B2"/>
+  <text x="264" y="62" fill="#E65100" font-weight="bold">id/wit/blueprint/mobile/blueprint_mobile_flutter</text>
+  <text x="464" y="62" fill="#333">/MainActivity.kt</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="95" x2="300" y2="115" class="arrow"/>
+
+  <!-- After box -->
+  <rect x="10" y="120" width="580" height="70" rx="8" fill="#E8F5E9" stroke="#66BB6A" stroke-width="1.5"/>
+  <text x="20" y="140" font-weight="bold" fill="#2E7D32" font-size="12">AFTER (Change to your package name)</text>
+  <text x="20" y="162" fill="#333">android/app/src/main/kotlin/</text>
+  <rect x="260" y="148" rx="3" width="290" height="18" fill="#C8E6C9"/>
+  <text x="264" y="162" fill="#2E7D32" font-weight="bold">your/new/package/name</text>
+  <text x="434" y="162" fill="#333">/MainActivity.kt</text>
+
+  <!-- Note at bottom -->
+  <text x="300" y="200" class="label" text-anchor="middle">Rename the directory to match your new package name</text>
+</svg>
